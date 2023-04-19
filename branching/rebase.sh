@@ -3,8 +3,10 @@
 
 count=1
 for param in "$@"; do
-    echo "Next parameter: $param"
+    echo "\$@ Parameter #$count = $param"
     count=$(( $count + 1 ))
 done
 
-#test boris
+
+echo "====="
+
