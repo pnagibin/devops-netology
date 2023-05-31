@@ -40,7 +40,8 @@ Ansible.
 
 ![image](https://github.com/pnagibin/devops-netology/assets/57600427/0a8eb43e-4784-4da8-8774-89f81da56f4f)
 
-![image](https://github.com/pnagibin/devops-netology/assets/57600427/8002c3b7-acfa-4aaa-a4eb-4d17d38a9f54)
+![image](https://github.com/pnagibin/devops-netology/assets/57600427/9546203b-8b72-4e99-931c-a692dfad531a)
+
 
 
 **Задача 4**
