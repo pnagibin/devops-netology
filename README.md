@@ -40,6 +40,9 @@ Ansible.
 
 ![image](https://github.com/pnagibin/devops-netology/assets/57600427/0a8eb43e-4784-4da8-8774-89f81da56f4f)
 
+![image](https://github.com/pnagibin/devops-netology/assets/57600427/8002c3b7-acfa-4aaa-a4eb-4d17d38a9f54)
+
+
 **Задача 4**
 Воспроизведите практическую часть лекции самостоятельно.
 
