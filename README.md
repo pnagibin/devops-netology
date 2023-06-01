@@ -20,6 +20,7 @@ Hey, Netology
 
 **Ответ:**
 
+https://hub.docker.com/r/pnagibin/netology-devops-pnagibin-nginx
 
 **Задача 2**
 
