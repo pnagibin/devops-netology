@@ -68,6 +68,21 @@ https://hub.docker.com/r/pnagibin/netology-devops-pnagibin-nginx
 
 **Ответ:**
 
+Создаю контейнер из образа Centos и монтирую в него папку с хоста
+docker run -d -it --name centos --mount type=bind,source="$(pwd)",target=/opt/data centos
+Подключаюсь к контейнеру Centos, создаю в нем файл test vi /opt/data/test текстом "Text from Centos container"
+Создаю еще один файл с хотсовой машины
+Созда контейнер из образа Debian и монтирую в него папку с хоста
+docker run -d -it --name debian --mount type=bind,source="$(pwd)",target=/opt/data debian
+Подключаюсь к контейнеру Debian и читаю содержимое директории и файлов /opt/data
+
+![image](https://github.com/pnagibin/devops-netology/assets/57600427/0d2c8017-75e9-4765-b00c-ee4c9862b58d)
+
+![image](https://github.com/pnagibin/devops-netology/assets/57600427/0f9c5d63-4e2a-48a1-ac7e-3f47789f19a5)
+
+![image](https://github.com/pnagibin/devops-netology/assets/57600427/acff5536-c417-4240-86bb-1e41bb597f52)
+
+
 ---
 
 **Задача 4 (*)**
