@@ -5,6 +5,9 @@
 
 **Ответ**
 
+![image](https://github.com/pnagibin/devops-netology/assets/57600427/b0382c1f-14df-4229-aff5-ac842e21221e)
+
+
 **Задача 2**
 2.1. Создайте вашу первую виртуальную машину в YandexCloud с помощью web-интерфейса YandexCloud.
 
