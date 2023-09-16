@@ -46,4 +46,6 @@ name  = "example_${random_password.random_string_FAKE.resulT}"
 Объясните, почему при этом не был удалён docker-образ nginx:latest. Ответ подкрепите выдержкой из документации провайдера docker.
 
 **Ответ:**
-На этот обаз могут ссылаться другие контейнеры, которые были созданы за пределами терраформ, поэтому образ не удаляется автоматически с целью защиты других контейнеров.
+В main.tf параметр keep_locally имеет значение true.
+
+keep_locally (Boolean) If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
