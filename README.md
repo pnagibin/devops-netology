@@ -54,6 +54,9 @@ core_fraction=5 - https://cloud.yandex.ru/docs/compute/api-ref/grpc/instance_ser
 2. Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их **default** прежними значениями из main.tf. 
 3. Проверьте terraform plan. Изменений быть не должно. 
 
+#### Ответ:
+
+![img_2.png](img_2.png)
 
 ### Задание 3
 
@@ -62,6 +65,12 @@ core_fraction=5 - https://cloud.yandex.ru/docs/compute/api-ref/grpc/instance_ser
 3. Примените изменения.
 
 
+#### Ответ:
+
+![img_3.png](img_3.png)
+
+![img_4.png](img_4.png)
+
 ### Задание 4
 
 1. Объявите в файле outputs.tf output типа map, содержащий { instance_name = external_ip } для каждой из ВМ.
@@ -69,6 +78,9 @@ core_fraction=5 - https://cloud.yandex.ru/docs/compute/api-ref/grpc/instance_ser
 
 В качестве решения приложите вывод значений ip-адресов команды ```terraform output```.
 
+#### Ответ:
+
+![img_5.png](img_5.png)
 
 ### Задание 5
 
