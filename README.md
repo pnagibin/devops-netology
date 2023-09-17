@@ -88,6 +88,8 @@ core_fraction=5 - https://cloud.yandex.ru/docs/compute/api-ref/grpc/instance_ser
 2. Замените переменные с именами ВМ из файла variables.tf на созданные вами local-переменные.
 3. Примените изменения.
 
+#### Ответ
+![img_6.png](img_6.png)
 
 ### Задание 6
 
