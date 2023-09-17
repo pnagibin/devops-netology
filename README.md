@@ -98,6 +98,10 @@ core_fraction=5 - https://cloud.yandex.ru/docs/compute/api-ref/grpc/instance_ser
 3. Найдите и удалите все более не используемые переменные проекта.
 4. Проверьте terraform plan. Изменений быть не должно.
 
+#### Ответ
+
+![img_7.png](img_7.png)
+
 ------
 
 ## Дополнительное задание (со звёздочкой*)
