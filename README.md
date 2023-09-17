@@ -42,6 +42,11 @@ https://github.com/yandex-cloud/docs/blob/master/ru/compute/concepts/vm-platform
 `preemptible = tru https://cloud.yandex.com/en/docs/compute/concepts/preemptible-vm
 
 core_fraction=5 - https://cloud.yandex.ru/docs/compute/api-ref/grpc/instance_service, https://cloud.yandex.ru/docs/compute/concepts/performance-levels
+
+![img.png](img.png)
+
+![img_1.png](img_1.png)
+
 ### Задание 2
 
 1. Изучите файлы проекта.
