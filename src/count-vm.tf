@@ -60,6 +60,7 @@ variable "vm_web_role" {
   default     = "web"
   description = "VM role"
 }
+
 ### Create resources
 
 data "yandex_compute_image" "ubuntu" {
@@ -67,7 +68,7 @@ data "yandex_compute_image" "ubuntu" {
 }
 resource "yandex_compute_instance" "platform" {
   count = 2
-  name        = "${var.vm_web_name}-${var.vm_web_env}-${var.vm_web_project}-${var.vm_web_role}${count.index +1}"
+  name        = "${var.vm_web_name}-${var.vm_web_env}-${var.vm_web_project}-${var.vm_web_role}-${count.index +1}"
   platform_id = var.vm_web_platform_id
   resources {
     cores         = var.vms_resources["web"]["vm_cores"]
@@ -83,7 +84,7 @@ resource "yandex_compute_instance" "platform" {
     preemptible = true
   }
   network_interface {
-    security_group_ids = yandex_vpc_security_group.example_dynamic.id
+    security_group_ids = ["${yandex_vpc_security_group.example.id}"]
     subnet_id = yandex_vpc_subnet.develop.id
     nat       = true
   }
