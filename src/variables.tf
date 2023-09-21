@@ -94,21 +94,36 @@ variable "vm_web_role" {
   description = "VM role"
 }
 
-variable "servers" {
-  description = "List of servers"
-  type        = list(object({
-    vm_name = string
-    cpu     = number
-    ram     = number
-    disk    = number
-  }))
-}
-
 data "yandex_compute_image" "ubuntu" {
   family = var.vm_web_family
 }
 
 variable "ssh_pub_key_file" {
   type        = string
+  default     = "/root/.ssh/id_ed25519.pub"
   description = "SSH pub key file"
+}
+
+variable "servers" {
+  description = "List of servers"
+  type = list(object({
+   vm_name = string
+    cpu     = number
+    ram     = number
+    core_fraction    = number
+  }))
+  default = [
+    {
+       vm_name = "main"
+      cpu   = 2
+      ram   = 2
+      core_fraction  = 20
+    },
+    {
+     vm_name = "replica"
+      cpu   = 2
+      ram   = 1
+      core_fraction  = 5
+    }
+  ]
 }
