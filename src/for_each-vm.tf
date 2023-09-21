@@ -1,12 +1,13 @@
 ### Create resources
-resource "yandex_compute_instance" "platform-1" {
-  count = 2
-  name        = "${var.vm_web_name}-${var.vm_web_env}-${var.vm_web_project}-${var.vm_web_role}-${count.index +1}"
+resource "yandex_compute_instance" "platform-2" {
+  depends_on [yandex_compute_instance.platform-1]
+  for_each = { for server in var.servers : server.vm_name => server }
+  name        = each.key
   platform_id = var.vm_web_platform_id
   resources {
-    cores         = var.vms_resources["web"]["vm_cores"]
-    memory        = var.vms_resources["web"]["vm_memory"]
-    core_fraction = var.vms_resources["web"]["vm_core_fraction"]
+    cores         = each.value.cpu
+    memory        = each.value.ram
+    core_fraction = each.value.core_fraction
   }
   boot_disk {
     initialize_params {
@@ -24,7 +25,7 @@ resource "yandex_compute_instance" "platform-1" {
 
   metadata = {
     serial-port-enable = 1
-    ssh-keys           = "ubuntu:${var.vms_ssh_root_key}"
+    ssh-keys           = "ubuntu:${file(var.ssh_pub_key_file)}"
   }
 
 }
