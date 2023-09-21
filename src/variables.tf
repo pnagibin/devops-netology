@@ -104,21 +104,6 @@ variable "servers" {
   }))
 }
 
-servers = [
-    {
-      vm_name = "main"
-      cpu   = 2
-      ram   = 2
-      core_fraction  = 20
-    },
-    {
-      vm_name = "replica"
-      cpu   = 2
-      ram   = 1
-      core_fraction  = 5
-    }
-]
-
 data "yandex_compute_image" "ubuntu" {
   family = var.vm_web_family
 }
@@ -127,5 +112,3 @@ variable "ssh_pub_key_file" {
   type        = string
   description = "SSH pub key file"
 }
-
-ssh_pub_key_file = "/root/.ssh/id_ed25519.pub"
