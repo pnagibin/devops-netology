@@ -1,9 +1,9 @@
 resource "yandex_compute_disk" "volumes" {
-  count    = 3
-  name     = "disk-name-${count.index +1}"
-  type     = "network-hdd"
-  zone     = "ru-central1-a"
-  size     = 1
+  for_each = { for volume in var.volumes : volume.volume_name => volume }
+  name     = each.value["volume_name"]
+  type     = each.value["volume_type"]
+  zone     = each.value["volume_zone"]
+  size     = each.value["volume_size"]
 }
 
 ### Create resources
@@ -36,9 +36,9 @@ resource "yandex_compute_instance" "platform-3" {
     ssh-keys           = "ubuntu:${file(var.ssh_pub_key_file)}"
   }
   dynamic "secondary_disk" {
-    for_each = ["${yandex_compute_disk.volumes}"]
+    for_each = var.volumes
     content {
-      disk_id = lookup(secondary_disk.value, "id", null)
+      disk_id = yandex_compute_disk.volumes[secondary_disk.value.volume_name].id
     }
   }
 }

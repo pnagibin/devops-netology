@@ -126,6 +126,36 @@ variable "servers" {
   ]
 }
 
+variable "volumes" {
+  description = "List of servers"
+  type = list(object({
+   volume_name = string
+   volume_type     = string
+   volume_zone     = string
+   volume_size    = number
+  }))
+  default = [
+    {
+   volume_name = "vm-disk-1"
+   volume_type     = "network-hdd"
+   volume_zone     = "ru-central1-a"
+   volume_size    = 1
+    },
+    {
+   volume_name = "vm-disk-2"
+   volume_type     = "network-hdd"
+   volume_zone     = "ru-central1-a"
+   volume_size    = 1
+    },
+    {
+   volume_name = "vm-disk-3"
+   volume_type     = "network-hdd"
+   volume_zone     = "ru-central1-a"
+   volume_size    = 1
+    }
+  ]
+}
+
 variable "storage" {
   description = "List of servers"
   type = list(object({
