@@ -70,6 +70,8 @@ https://github.com/pnagibin/devops-netology/blob/ter-homeworks-03/src/disk_vm.tf
 
 ### Ответ 4
 
+![img_8.png](img_8.png)
+
 ------
 
 ## Дополнительные задания (со звездочкой*)
