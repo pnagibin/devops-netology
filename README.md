@@ -70,6 +70,10 @@ https://github.com/pnagibin/devops-netology/blob/ter-homeworks-03/src/disk_vm.tf
 
 ### Ответ 4
 
+https://github.com/pnagibin/devops-netology/blob/ter-homeworks-03/src/hosts.tftpl
+
+https://github.com/pnagibin/devops-netology/blob/ter-homeworks-03/src/ansible.tf
+
 ![img_8.png](img_8.png)
 
 ------
