@@ -31,8 +31,7 @@ variable "vpc_name" {
   description = "VPC network&subnet name"
 }
 
-###ssh vars
-
+##ssh vars
 variable "vms_ssh_root_key" {
   type        = string
   default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPvJ6rpGbGn0YsoyIw4kpQFIxYn8QsBoa/6a4xdLptAQ root@DESKTOP-00G1TMP"
@@ -40,7 +39,6 @@ variable "vms_ssh_root_key" {
 }
 
 ###vm vars
-
 variable "vm_web_family" {
   type        = string
   default     = "ubuntu-2004-lts"
@@ -124,6 +122,24 @@ variable "servers" {
       cpu   = 2
       ram   = 1
       core_fraction  = 5
+    }
+  ]
+}
+
+variable "storage" {
+  description = "List of servers"
+  type = list(object({
+   vm_name = string
+    cpu     = number
+    ram     = number
+    core_fraction    = number
+  }))
+  default = [
+    {
+       vm_name = "storage"
+      cpu   = 2
+      ram   = 2
+      core_fraction  = 20
     }
   ]
 }
