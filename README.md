@@ -28,7 +28,9 @@
 ### Ответ 2
 
 https://github.com/pnagibin/devops-netology/blob/ter-homeworks-03/src/variables.tf
+
 https://github.com/pnagibin/devops-netology/blob/ter-homeworks-03/src/count-vm.tf
+
 https://github.com/pnagibin/devops-netology/blob/ter-homeworks-03/src/for_each-vm.tf
 
 ![img_3.png](img_3.png)
@@ -44,7 +46,15 @@ https://github.com/pnagibin/devops-netology/blob/ter-homeworks-03/src/for_each-v
 
 ### Ответ 3
 
-------
+https://github.com/pnagibin/devops-netology/blob/ter-homeworks-03/src/variables.tf
+
+https://github.com/pnagibin/devops-netology/blob/ter-homeworks-03/src/disk_vm.tf
+
+![img_5.png](img_5.png)
+
+![img_7.png](img_7.png)
+
+![img_6.png](img_6.png)------
 
 ### Задание 4
 
