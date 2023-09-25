@@ -12,6 +12,10 @@
 
 ![img.png](img.png)
 
+https://github.com/pnagibin/devops-netology/blob/ter-homeworks-04/src/config.tf
+
+https://github.com/pnagibin/devops-netology/blob/ter-homeworks-04/src/cloud-init.yml
+
 ------
 
 ### Задание 2
