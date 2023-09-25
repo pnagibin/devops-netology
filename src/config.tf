@@ -1,4 +1,4 @@
-data template_file "cloud-init" {
+data template_file "cloudinit" {
   template = file("./cloud-init.yml")
 
   vars = {

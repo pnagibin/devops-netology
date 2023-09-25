@@ -23,8 +23,9 @@ module "test-vm" {
   public_ip       = true
 
   metadata = {
-      user-data          = data.template_file.cloud-init.rendered #Для демонстрации №3
+      user-data          = data.template_file.cloudinit.rendered #Для демонстрации №3
       serial-port-enable = 1
+#      ssh-keys = "ubuntu:${file("/root/.ssh/id_ed25519.pub")}"
   }
 
 }
