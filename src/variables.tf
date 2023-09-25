@@ -31,27 +31,24 @@ variable "vpc_name" {
   description = "VPC network&subnet name"
 }
 
+variable "public_key" {
+  type    = string
+  default = ""
+}
+
 ###common vars
-
-variable "vms_ssh_root_key" {
+variable "ssh_public_key" {
   type        = string
-  default     = "your_ssh_ed25519_key"
-  description = "ssh-keygen -t ed25519"
+  default     = "/root/.ssh/id_ed25519.pub"
+  description = "Path to ypu ssh pub key"
 }
 
-###example vm_web var
-variable "vm_web_name" {
-  type        = string
-  default     = "netology-develop-platform-web"
-  description = "example vm_web_ prefix"
+variable packages {
+  type    = list
+  default = ["nginx"]
 }
 
-###example vm_db var
-variable "vm_db_name" {
+variable username {
   type        = string
-  default     = "netology-develop-platform-db"
-  description = "example vm_db_ prefix"
+  default     = "ubuntu"
 }
-
-
-
