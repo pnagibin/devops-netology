@@ -17,4 +17,3 @@ variable "vpc_subnet_v4_cidr_blocks" {
   type        = string
   description = "yandex_vpc_subnet v4_cidr_blocks"
 }
-
