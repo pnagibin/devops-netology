@@ -1,9 +1,10 @@
+#moduls
 module "vpc_develop" {
 source = "./vpc"
-vpc_network_name = "develop"
-vpc_subnet_name = "develop-ru-central1-a"
-vpc_subnet_zone = "ru-central1-a"
-vpc_subnet_v4_cidr_blocks = "10.0.1.0/24"
+vpc_network_name = var.vpc_network_name
+vpc_subnet_name = var.vpc_subnet_name
+vpc_subnet_zone = var.vpc_subnet_zone
+vpc_subnet_v4_cidr_blocks = var.vpc_subnet_v4_cidr_blocks
 }
 
 module "test-vm" {
