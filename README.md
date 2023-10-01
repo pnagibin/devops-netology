@@ -69,6 +69,16 @@ https://github.com/pnagibin/devops-netology/blob/ter-homeworks-04/src/AdminGuide
 
 ### Ответ 3
 
+1. ![img_2.png](img_2.png)
+
+2. ![img_3.png](img_3.png)
+
+3. ![img_4.png](img_4.png)
+
+4. Результат после импорта
+   
+![img_5.png](img_5.png)
+
 ------
 
 
