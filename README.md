@@ -42,6 +42,12 @@ module "vpc_dev" {
 
 ### Ответ 2
 
+Дочерний модуль
+https://github.com/pnagibin/devops-netology/tree/ter-homeworks-04/src/vpc
+
+Корневой модуль
+https://github.com/pnagibin/devops-netology/tree/ter-homeworks-04/src
+
 ![img_1.png](img_1.png)
 
 ------
