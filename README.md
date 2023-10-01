@@ -31,7 +31,9 @@
 
 4. ![img_4.png](img_4.png)
 
+6![img_5.png](img_5.png)
 
+7.
 
 
 
