@@ -13,7 +13,7 @@
 3. Воспользуйтесь подготовленным (используется `docker`) или создайте собственное окружение для проведения дальнейших испытаний.
 4. Проведите запуск playbook на окружении из `prod.yml`. Зафиксируйте полученные значения `some_fact` для каждого из `managed host`.
 5. Добавьте факты в `group_vars` каждой из групп хостов так, чтобы для `some_fact` получились значения: для `deb` — `deb default fact`, для `el` — `el default fact`.
-6.  Повторите запуск playbook на окружении `prod.yml`. Убедитесь, что выдаются корректные значения для всех хостов.
+6. Повторите запуск playbook на окружении `prod.yml`. Убедитесь, что выдаются корректные значения для всех хостов.
 7. При помощи `ansible-vault` зашифруйте факты в `group_vars/deb` и `group_vars/el` с паролем `netology`.
 8. Запустите playbook на окружении `prod.yml`. При запуске `ansible` должен запросить у вас пароль. Убедитесь в работоспособности.
 9. Посмотрите при помощи `ansible-doc` список плагинов для подключения. Выберите подходящий для работы на `control node`.
@@ -30,10 +30,20 @@
 3. ![img_3.png](img_3.png)
 
 4. ![img_4.png](img_4.png)
+5. 
+6. ![img_5.png](img_5.png)
+7. ...
+8. el https://github.com/pnagibin/devops-netology/blob/08-ansible-01-base/playbook/group_vars/el/examp.yml
 
-6![img_5.png](img_5.png)
+deb https://github.com/pnagibin/devops-netology/blob/08-ansible-01-base/playbook/group_vars/deb/examp.yml
 
-7.
+![img_6.png](img_6.png)
+
+9. ![img_7.png](img_7.png)
+
+10. ...
+
+11. ![img_8.png](img_8.png)
 
 
 
