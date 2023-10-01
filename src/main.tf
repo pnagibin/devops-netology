@@ -10,9 +10,9 @@ vpc_subnet_v4_cidr_blocks = var.vpc_subnet_v4_cidr_blocks
 module "test-vm" {
   source          = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
   env_name        = "develop"
-  network_id      = yandex_vpc_network.develop.id
+  network_id      = "${module.vpc_develop.output_vpc_network_id}"
   subnet_zones    = ["ru-central1-a"]
-  subnet_ids      = [ yandex_vpc_subnet.develop.id ]
+  subnet_ids      = ["${module.vpc_develop.output_vpc_subnet_id}"]
   instance_name   = "web"
   instance_count  = 2
   image_family    = "ubuntu-2004-lts"

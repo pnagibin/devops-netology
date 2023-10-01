@@ -1,3 +1,7 @@
+output "output_vpc_network_id" {
+  value = yandex_vpc_network.develop.id
+}
+
 output "output_vpc_subnet_name" {
   value = yandex_vpc_subnet.develop.name
 }
