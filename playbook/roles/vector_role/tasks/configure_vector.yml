@@ -1,0 +1,11 @@
+---
+- name: Configure Vectore | emsure what directory exist
+  file:
+    path: "{{ vector_config_dir }}"
+    state: directory
+    mode: 0644
+- name: Configure VEctor | Template config
+  ansible.builtin.template:
+    src: vector.yml.j2
+    mode: 0644
+    dest: "{{ vector_config_dir }}/vector.yml"
