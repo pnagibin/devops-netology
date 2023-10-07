@@ -1,0 +1,6 @@
+services:
+  centos7:
+    image: centos:7
+    container_name: clickhouse-01
+    stdin_open: true
+    tty: true
