@@ -1,0 +1,12 @@
+---
+- name: Install clickhouse packages
+  become: true
+  become_method: sudo
+  become_user: root
+  ansible.builtin.yum:
+    name:
+      - clickhouse-common-static-{{ clickhouse_version }}.rpm
+      - clickhouse-client-{{ clickhouse_version }}.rpm
+      - clickhouse-server-{{ clickhouse_version }}.rpm
+    state: present
+  notify: restart clickhouse service

@@ -1,0 +1,10 @@
+---
+- name: Clickhouse | Download package
+  ansible.builtin.include_tasks:
+    file: download_clickhouse.yml
+- name: Clickhouse | install package
+  ansible.builtin.include_tasks:
+    file: install_clickhouse.yml
+- name: Clickhouse | Create database
+  ansible.builtin.include_tasks:
+    file: create_database.yml

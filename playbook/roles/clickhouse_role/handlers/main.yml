@@ -1,0 +1,9 @@
+---
+- name: restart clickhouse service
+  become: true
+  become_method: sudo
+  become_user: root
+  ansible.builtin.systemd:
+    name: clickhouse-server
+    state: started
+    daemon_reload: true
