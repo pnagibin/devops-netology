@@ -1,0 +1,7 @@
+---
+- name: NGINX | Install package
+  ansible.builtin.include_tasks:
+    file: install_nginx.yml
+- name: NGINX | Copy lighthouse static files
+  ansible.builtin.include_tasks:
+    file: configure_lighthouse.yml

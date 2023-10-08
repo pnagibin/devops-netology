@@ -1,0 +1,7 @@
+---
+clickhouse:
+  hosts:
+    clickhouse-01:
+      ansible_connection: ssh
+      ansible_host: 158.160.120.23
+      ansible_ssh_user: centos

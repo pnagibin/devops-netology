@@ -1,7 +1,7 @@
 ---
 - name: Configure Service | Template systemd unit
   become: true
-  become_method: su
+  become_method: sudo
   become_user: root
   ansible.builtin.template:
     src: vector.service.j2

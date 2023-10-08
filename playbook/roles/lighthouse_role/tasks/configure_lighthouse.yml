@@ -1,0 +1,9 @@
+---
+- name: NGINX | insert lighthouse static content
+  become: true
+  become_method: sudo
+  become_user: root
+  ansible.builtin.copy:
+    src:  lighthouse-master/
+    dest: /usr/share/nginx/html/
+  notify: Start NGiNX

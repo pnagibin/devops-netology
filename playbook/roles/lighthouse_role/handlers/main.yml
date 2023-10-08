@@ -1,0 +1,9 @@
+---
+- name: Start NGiNX
+  become: true
+  become_method: sudo
+  become_user: root
+  ansible.builtin.systemd:
+    name: nginx
+    state: restarted
+    daemon_reload: true

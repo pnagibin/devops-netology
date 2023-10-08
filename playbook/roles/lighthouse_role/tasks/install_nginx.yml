@@ -1,0 +1,16 @@
+---
+- name: Install EPEL repo
+  become: true
+  become_method: sudo
+  become_user: root
+  ansible.builtin.yum:
+    name: epel-release
+    state: present
+
+- name: Install NGINX
+  become: true
+  become_method: sudo
+  become_user: root
+  ansible.builtin.yum:
+    name: nginx
+    state: present

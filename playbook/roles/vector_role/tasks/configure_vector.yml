@@ -1,10 +1,16 @@
 ---
 - name: Configure Vectore | emsure what directory exist
+  become: true
+  become_method: sudo
+  become_user: root
   file:
     path: "{{ vector_config_dir }}"
     state: directory
     mode: 0644
-- name: Configure VEctor | Template config
+- name: Configure Vector | Template config
+  become: true
+  become_method: sudo
+  become_user: root
   ansible.builtin.template:
     src: vector.yml.j2
     mode: 0644

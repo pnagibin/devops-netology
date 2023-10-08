@@ -1,0 +1,45 @@
+---
+#PLAY для установки сервера Clickhouse
+- name: Install Clickhouse
+  hosts: clickhouse
+  tasks:
+    - block:
+    #Скачиваю дистрибутивы
+        - name: Get clickhouse distrib 1
+          ansible.builtin.get_url:
+            url: "https://packages.clickhouse.com/rpm/stable/{{ item }}-{{ clickhouse_version }}.noarch.rpm"
+            dest: "./{{ item }}-{{ clickhouse_version }}.rpm"
+          with_items: "{{ clickhouse_packages }}"
+        - name: Get clickhouse distrib 2
+          ansible.builtin.get_url:
+            url: "https://packages.clickhouse.com/rpm/stable/clickhouse-common-static-{{ clickhouse_version }}.x86_64.rpm"
+            dest: "./clickhouse-common-static-{{ clickhouse_version }}.rpm"
+    #Устанавливаю дистрибутивы
+    - name: Install clickhouse packages
+      become: true
+      become_method: sudo
+      become_user: root
+      ansible.builtin.yum:
+        name:
+          - clickhouse-common-static-{{ clickhouse_version }}.rpm
+          - clickhouse-client-{{ clickhouse_version }}.rpm
+          - clickhouse-server-{{ clickhouse_version }}.rpm
+        state: present
+      notify: restart clickhouse service
+    #Ожидаю запуска сервера clickhouse-server путем прослушивания порта 9000
+    - name: Wait for opening port 9000
+      ansible.builtin.wait_for:
+        port: 9000
+        delay: 10
+        host: 127.0.0.1
+    #Создаю базу данных
+    - name: Create database
+      ansible.builtin.command: "clickhouse-client -q 'create database logs;'"
+      register: create_db
+      failed_when: create_db.rc != 0 and create_db.rc !=82
+      changed_when: create_db.rc == 0
+  roles:
+    #Устанавливая вектор
+    - vector_role
+    #Устанавливая lighthouse
+    - lighthouse_role
